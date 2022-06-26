@@ -63,6 +63,15 @@ URL_LIST=http://downloads.sourceforge.net/project/jump-pilot/OpenJUMP/osgeo/osge
 # download and set vars (filter out anything not setting a variable)
 eval "$(wget -nv -O- "$URL_LIST" | awk '/^[a-zA-Z0-9_-]+=/')"
 
+PKG_FOLDER="$PKG_NAME-$PKG_VERSION"
+PKG_HOME="/usr/lib/$PKG_FOLDER"
+PKG_DATA="/usr/local/share/$PKG_NAME"
+PKG_DATA_SAMPLES="$PKG_DATA/sample_data"
+PKG_DATA_SAMPLES_LINK="/usr/local/share/data/vector/$PKG_NAME"
+PKG_LINK=/usr/local/bin/openjump
+PKG_DESKTOP="$USER_HOME/Desktop/openjump.desktop"
+PKG_SUCCESS="$PKG_HOME/.installed"
+
 ## these defs are defined by conf file above
 #URL_PKG=http://downloads.sourceforge.net/project/jump-pilot/OpenJUMP_snapshots/OpenJUMP-20120108-r2597-CORE.zip
 #URL_ICON=http://jump-pilot.svn.sourceforge.net/viewvc/jump-pilot/core/trunk/icon/openjump_icon3.svg
